@@ -1,7 +1,7 @@
 my:
   name: 赵顺
 spring:
-   redis:
+  redis:
     database: 0
     host: localhost
     port: 6379
@@ -12,3 +12,18 @@ spring:
         max-wait: -1ms
         max-idle: 10
         min-idle: 0
+  rabbitmq:
+    host: localhost
+    post: 5672
+    username: guest
+    password: guest
+  clout:
+    bus:
+      enabled: true
+      trace:
+        enable: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
